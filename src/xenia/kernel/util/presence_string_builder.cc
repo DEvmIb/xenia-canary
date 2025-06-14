@@ -119,7 +119,7 @@ std::string AttributeStringFormatter::GetStringFromSpecifier(
     }
 
     const auto attribute_string = title_xlast_->GetLocalizedString(
-        attribute_string_id.value(), XLanguage::kEnglish);
+        attribute_string_id.value(), XLanguage::kGerman);
 
     return xe::to_utf8(attribute_string);
   }

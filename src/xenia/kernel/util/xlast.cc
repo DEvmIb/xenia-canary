@@ -344,7 +344,7 @@ std::string XLast::GetLocaleStringFromLanguage(XLanguage language) const {
     return value->second;
   }
 
-  return language_mapping.at(XLanguage::kEnglish);
+  return language_mapping.at(XLanguage::kGerman);
 }
 
 }  // namespace util

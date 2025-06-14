@@ -494,7 +494,7 @@ static_assert_size(X_KSPINLOCK, 4);
 // https://free60project.github.io/wiki/Profile_Account/
 enum class XLanguage : uint32_t {
   kInvalid = 0,
-  kEnglish = 1,
+  kEnglish = 3,
   kJapanese = 2,
   kGerman = 3,
   kFrench = 4,

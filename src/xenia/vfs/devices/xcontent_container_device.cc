@@ -162,7 +162,7 @@ kernel::xam::XCONTENT_AGGREGATE_DATA XContentContainerDevice::content_header()
   data.title_id = header_->content_metadata.execution_info.title_id;
   data.content_type = header_->content_metadata.content_type;
 
-  auto name = header_->content_metadata.display_name(XLanguage::kEnglish);
+  auto name = header_->content_metadata.display_name(XLanguage::kGerman);
   if (name.empty()) {
     // Find first filled language and use it. It might be incorrect, but meh
     // until stfs support is done.

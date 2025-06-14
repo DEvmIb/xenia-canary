@@ -846,7 +846,7 @@ X_STATUS Emulator::ProcessContentPackageHeader(
       path.filename());
 
   installation_info.name_ =
-      xe::to_utf8(header->content_metadata.display_name(XLanguage::kEnglish));
+      xe::to_utf8(header->content_metadata.display_name(XLanguage::kGerman));
   installation_info.content_type_ =
       static_cast<XContentType>(header->content_metadata.content_type);
   installation_info.content_size_ = header->content_metadata.content_size;

@@ -375,7 +375,7 @@ struct XContentMetadata {
     if (lang_id >= kNumLanguagesV2) {
       assert_always();
       // no room for this lang, read from english slot..
-      lang_id = uint32_t(XLanguage::kEnglish) - 1;
+      lang_id = uint32_t(XLanguage::kGerman) - 1;
     }
 
     const be<uint16_t>* str = 0;
@@ -401,7 +401,7 @@ struct XContentMetadata {
     if (lang_id >= kNumLanguagesV2) {
       assert_always();
       // no room for this lang, read from english slot..
-      lang_id = uint32_t(XLanguage::kEnglish) - 1;
+      lang_id = uint32_t(XLanguage::kGerman) - 1;
     }
 
     const be<uint16_t>* str = 0;
@@ -435,7 +435,7 @@ struct XContentMetadata {
     if (lang_id >= kNumLanguagesV2) {
       assert_always();
       // no room for this lang, store in english slot..
-      lang_id = uint32_t(XLanguage::kEnglish) - 1;
+      lang_id = uint32_t(XLanguage::kGerman) - 1;
     }
 
     char16_t* str = 0;
@@ -463,7 +463,7 @@ struct XContentMetadata {
     if (lang_id >= kNumLanguagesV2) {
       assert_always();
       // no room for this lang, store in english slot..
-      lang_id = uint32_t(XLanguage::kEnglish) - 1;
+      lang_id = uint32_t(XLanguage::kGerman) - 1;
     }
 
     char16_t* str = 0;

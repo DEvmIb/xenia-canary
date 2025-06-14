@@ -100,7 +100,7 @@ bool UserTracker::UnlockAchievement(uint64_t xuid, uint32_t achievement_id) {
   title_info->gamerscore_earned += spa_achievement->gamerscore;
 
   const std::string achievement_name = spa_data_->GetStringTableEntry(
-      spa_data_->kGerman, spa_achievement->label_id);
+      spa_data_->default_language(), spa_achievement->label_id);
 
   XELOGI("Player: {} Unlocked Achievement: {}", user->name(),
          achievement_name.c_str());

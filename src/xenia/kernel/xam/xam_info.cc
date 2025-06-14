@@ -258,16 +258,16 @@ XLanguage xeGetLanguage(bool extended_languages_support) {
     return desired_language;
   }
   if ((region & 0xff00) != 0x100) {
-    return XLanguage::kEnglish;
+    return XLanguage::kGerman;
   }
   switch (region) {
     case 0x101:  // NTSC-J (Japan)
-      return XLanguage::kJapanese;
+      return XLanguage::kGerman;
     case 0x102:  // NTSC-J (China)
-      return extended_languages_support ? XLanguage::kSChinese
-                                        : XLanguage::kEnglish;
+      return extended_languages_support ? XLanguage::kGerman
+                                        : XLanguage::kGerman;
     default:
-      return XLanguage::kKorean;
+      return XLanguage::kGerman;
   }
 }
 

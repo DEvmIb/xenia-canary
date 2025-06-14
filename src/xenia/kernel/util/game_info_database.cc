@@ -72,7 +72,7 @@ std::vector<uint8_t> GameInfoDatabase::GetIcon() const {
 
 XLanguage GameInfoDatabase::GetDefaultLanguage() const {
   if (!is_valid_) {
-    return XLanguage::kEnglish;
+    return XLanguage::kGerman;
   }
 
   return spa_gamedata_->default_language();
@@ -209,20 +209,20 @@ GameInfoDatabase::ProductInformation GameInfoDatabase::GetProductInformation()
         break;
       case ProductInformationEntry::PublisherString:
         info.publisher_name = xe::to_utf8(xlast_gamedata_->GetLocalizedString(
-            attribute.second, XLanguage::kEnglish));
+            attribute.second, XLanguage::kGerman));
         break;
       case ProductInformationEntry::DeveloperString:
         info.developer_name = xe::to_utf8(xlast_gamedata_->GetLocalizedString(
-            attribute.second, XLanguage::kEnglish));
+            attribute.second, XLanguage::kGerman));
         break;
       case ProductInformationEntry::MarketingString:
         info.marketing_info = xe::to_utf8(xlast_gamedata_->GetLocalizedString(
-            attribute.second, XLanguage::kEnglish));
+            attribute.second, XLanguage::kGerman));
         break;
       case ProductInformationEntry::GenreTypeString:
         info.genre_description =
             xe::to_utf8(xlast_gamedata_->GetLocalizedString(
-                attribute.second, XLanguage::kEnglish));
+                attribute.second, XLanguage::kGerman));
         break;
       default:
         break;
