@@ -191,7 +191,7 @@ XLanguage SpaInfo::default_language() const {
   auto block =
       GetEntry(static_cast<uint16_t>(SpaSection::kMetadata), kXdbfIdXstc);
   if (!block) {
-    return XLanguage::kGerman;
+    return XLanguage::kEnglish;
   }
 
   auto xstc = reinterpret_cast<const XdbfXstc*>(block->data.data());

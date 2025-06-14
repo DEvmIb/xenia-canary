@@ -71,11 +71,12 @@ std::vector<uint8_t> GameInfoDatabase::GetIcon() const {
 }
 
 XLanguage GameInfoDatabase::GetDefaultLanguage() const {
-  if (!is_valid_) {
-    return XLanguage::kEnglish;
-  }
+  //if (!is_valid_) {
+  //  return XLanguage::kEnglish;
+  //}
 
-  return spa_gamedata_->default_language();
+  //return spa_gamedata_->default_language();
+  return XLanguage::kGerman;
 }
 
 std::string GameInfoDatabase::GetLocalizedString(const uint32_t id,
