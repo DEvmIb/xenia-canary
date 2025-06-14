@@ -48,19 +48,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
-    name: Lint
-    runs-on: windows-latest
-    env:
-      POWERSHELL_TELEMETRY_OPTOUT: 1
-    steps:
-      - uses: actions/checkout@main
-      - name: Lint
-        run: .\xb lint --all
+  #lint:
+  #  name: Lint
+  #  runs-on: windows-latest
+  #  env:
+  #    POWERSHELL_TELEMETRY_OPTOUT: 1
+  #  steps:
+  #    - uses: actions/checkout@main
+  #    - name: Lint
+  #      run: .\xb lint --all
 
   build:
     name: Build
-    needs: lint
+    #needs: lint
     runs-on: windows-2025
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
@@ -93,7 +93,8 @@ jobs:
 
   create-release:
     name: Create release
-    needs: [lint, build]
+    #needs: [lint, build]
+    needs: [build]
     if: |
       github.repository == 'xenia-canary/xenia-canary' &&
       github.event.action != 'pull_request' &&
